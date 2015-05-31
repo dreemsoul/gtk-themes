@@ -1,0 +1,246 @@
+/* I used the adwaita engine as a workaround for the arrows.
+Apart from that, you don't need adwaita for this theme to work properly. */
+
+
+/****************
+ * nicer arrows *
+ ****************/
+
+GtkArrow,
+GtkMenu *,
+GtkMenuItem * {
+    engine:adwaita;
+}
+
+/*******************
+ * check and radio *
+ *******************/
+
+.check,
+.radio,
+.check:insensitive,
+.radio:insensitive,
+.check:active:insensitive,
+.radio:active:insensitive,
+GtkCheckButton:hover,
+GtkCheckButton:active:hover,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus,
+.menuitem.check:active,
+.menuitem.radio:active {
+    background-color: transparent;
+    border-style: none;
+}
+
+.check,
+.check row:selected,
+.check row:selected:focus {
+    background-image: url("images/checkbox-inactive.png");
+    background-repeat: no-repeat;
+    background-position:center; 
+    background-color: transparent;
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+    background-image: url("images/checkbox-inactive-insensitive.png");
+}
+
+.check:active,
+.check row:selected:active,
+.check row:selected:focus:active {
+    background-image: url("images/checkbox-active.png");
+}
+
+.check:active:hover {
+    background-image: url("images/checkbox-active-hover.png");  
+}
+
+.menuitem.check:active {
+    background-image: url("images/checkbox-active-menuitem.png");
+}
+
+.check:active:insensitive,
+.check row:selected:active:insensitive,
+.check row:selected:focus:active:insensitive {
+    background-image: url("images/checkbox-active-insensitive.png");
+}
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
+    background-image: url("images/checkbox-mixed.png");
+}
+
+.check:inconsistent:hover {
+    background-image: url("images/checkbox-mixed-hover.png");  
+}
+
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
+    background-image: url("images/checkbox-mixed-insensitive.png");
+}
+
+/*********/
+
+.radio,
+.radio row:selected,
+.radio row:selected:focus {
+    background-image: url("images/radio-inactive.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-color: transparent;
+}
+
+.radio:active,
+.radio row:selected:active,
+.radio row:selected:focus:active {
+    background-image: url("images/radio-active.png");        
+}
+
+.radio:active:hover {
+    background-image: url("images/radio-active-hover.png");  
+}
+
+.menuitem.radio:active {
+    background-image: url("images/radio-active-menuitem.png"); 
+}
+
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
+    background-image: url("images/radio-inactive-insensitive.png");
+}
+
+.radio:active:insensitive,
+.radio row:selected:active:insensitive,
+.radio row:selected:focus:active:insensitive {
+    background-image: url("images/radio-active-insensitive.png");
+}
+
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focus:inconsistent {
+    background-image: url("images/radio-mixed.png");
+}
+
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focus:inconsistent:insensitive {
+    background-image: url("images/radio-mixed-insensitive.png");
+}
+
+
+/*************
+ * combo box *
+ *************/
+
+GtkComboBox.combobox-entry .button * {
+    color: transparent;
+}
+
+GtkComboBox.combobox-entry .button {
+    background-image: url("images/combobox-arrows.png"),
+                      -gtk-gradient(linear, left top, left bottom,
+                                 from (shade(@bg_color, 1.2)),
+                                 to (shade(@bg_color, 0.95)));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+GtkComboBox.combobox-entry .button:hover {
+    background-image: url("images/combobox-arrows.png"),
+                      -gtk-gradient(linear, left top, left bottom,
+                                from (shade(@bg_color, 1.35)),
+                                  to (shade(@bg_color, 1.1)));
+}
+
+
+GtkComboBox.combobox-entry .button:insensitive {
+    background-image: url("images/combobox-arrows-insensitive.png"),
+                     -gtk-gradient(linear, left top, left bottom,
+                                from (shade(@bg_color, 1.05)),
+                                 to (shade(@bg_color, 0.99)));
+}
+
+GtkComboBox * {
+    -GtkArrow-arrow-scaling: 0.2;
+}
+
+
+/***************
+ * progressbar *
+ ***************/
+ 
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus {
+    background: url("images/progressbar-horizontal.png") repeat-x;
+    background-size: auto 100%;
+}
+
+.progressbar.vertical {
+    background: url("images/progressbar-vertical.png") repeat-y;
+}
+
+
+/*************
+ * scrollbar *
+ *************/
+
+.scrollbar.button,
+.scrollbar.button:hover,
+.scrollbar.button:insensitive {
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position:center; 
+    engine:adwaita;
+    }
+
+.scrollbar.button.horizontal.left {
+   background-image: url("images/stepper-left.png");
+}
+
+.scrollbar.button.horizontal.right {
+   background-image: url("images/stepper-right.png");
+}
+
+.scrollbar.button.vertical.top {
+   background-image: url("images/stepper-up.png");
+}
+
+.scrollbar.button.vertical.bottom {
+   background-image: url("images/stepper-down.png");
+}
+
+.scrollbar.button.horizontal.left:insensitive {
+   background-image: url("images/stepper-left-insensitive.png");
+}
+
+.scrollbar.button.horizontal.right:insensitive {
+   background-image: url("images/stepper-right-insensitive.png");
+}
+
+.scrollbar.button.vertical.top:insensitive {
+   background-image: url("images/stepper-up-insensitive.png");
+}
+
+.scrollbar.button.vertical.bottom:insensitive {
+   background-image: url("images/stepper-down-insensitive.png");
+}
+
+.scrollbar.slider {
+border-style: none;
+}
+
+.scrollbar.slider.vertical {
+  background-image: url("images/slider-vertical.png");
+}
+
+.scrollbar.slider.horizontal{
+  background-image: url("images/slider-horizontal.png");
+}
