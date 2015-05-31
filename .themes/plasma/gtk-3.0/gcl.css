@@ -1,0 +1,17 @@
+@define-color bg_color #292929;
+@define-color selected_bg_color #412223; 
+@define-color base_color #292929;
+@define-color insensitive_base_color #292929;
+
+@define-color fg_color #d9dedc;
+@define-color insensitive_fg_color #d9dedc;
+
+@define-color insensitive_text_color #d9dedc;
+
+@define-color link_color #500d0d;
+@define-color visited_link_color #700e0e; 
+@define-color panel_bg_color #292929; 
+
+@define-color dark_fg_color #d9dedc;
+
+@define-color error_color #8b1c1c;
