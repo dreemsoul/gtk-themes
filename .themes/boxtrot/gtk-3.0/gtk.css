@@ -1,0 +1,6 @@
+/* 3spr3sso by Huku9H1F
+   This is a port of gtk2 theme Espresso by Jesse L. Kay to gtk3 */
+
+@import url("gcl.css"); /* colors */ 
+@import url("gtk-widgets.css"); /* the theme itself */ 
+@import url("gtk-widgets-images.css"); /* images */ 
